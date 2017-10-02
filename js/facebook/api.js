@@ -6,7 +6,7 @@ window.fbAsyncInit = function() {
         frictionlessRequests: true,
         xfbml : true,
         hideFlashCallback: onFlashHide,
-        version: 'v2.4'
+        version: 'v2.5'
     });
 
     FB.Canvas.setSize();
