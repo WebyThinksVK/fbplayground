@@ -10,17 +10,14 @@ window.fbAsyncInit = function() {
     });
 
     FB.Canvas.setSize();
-    FB.Canvas.getPageInfo(
-        function(info)
-        {
-            KT.api.trackPageRequest(playerID,
-                {data : "{\"width\":" + info.clientWidth + ",\"height\":" + info.clientHeight + "}"},
-                function(){ });
-        }
-    );
     
     loadSWF();
 };
+
+// Only works after `FB.init` is called
+function myFacebookLogin() {
+  FB.login(function(){}, {scope: 'publish_actions'});
+}
 
 // Load the SDK's source Asynchronously
 // Note that the debug version is being actively developed and might
