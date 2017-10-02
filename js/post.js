@@ -23,11 +23,10 @@ function PostToTimeline2(friendFacebookID, imageStr, captionStr, descriptionStr,
 
         //displayFlashScreenshot();
         FB.api(
-            "/me/games.achieves",
+            "/me/article",
             "POST",
             {
-                "achievement": "https://s3.amazonaws.com/jpscdev/fork/michael/test.html"
-            },
+        "object": "{\"fb:app_id\":\"178259235850786\",\"og:type\":\"article\",\"og:url\":\"https://apps.facebook.com/lucky-sevens\",\"og:title\":\" " + captionStr + "\",\"og:image\":\" " + imageStr + "\"}"            },
             function (response) {
                 console.log('FUCK');
                 console.log(JSON.stringify(response));
