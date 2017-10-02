@@ -26,7 +26,7 @@ function PostToTimeline2(friendFacebookID, imageStr, captionStr, descriptionStr,
             "/me/article",
             "POST",
             {
-        "object": "{\"fb:app_id\":\"178259235850786\",\"og:type\":\"article\",\"og:url\":\"https://apps.facebook.com/lucky-sevens\",\"og:title\":\" " + captionStr + "\",\"og:image\":\" " + imageStr + "\"}"            },
+        "object": "{\"fb:app_id\":\"178259235850786\",\"og:type\":\"article\",\"og:url\":\"https%3A%2F%2Fapps.facebook.com%2Flucky-sevens\",\"og:title\":\" " + captionStr + "\",\"og:image\":\" " + imageStr + "\"}"            },
             function (response) {
                 console.log('FUCK');
                 console.log(JSON.stringify(response));
